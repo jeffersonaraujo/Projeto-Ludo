@@ -1,0 +1,72 @@
+# Rodrigo Reboucas de Almeida
+# http://www.rodrigor.com/disciplinas
+# Projeto: Ludo
+# Iteracao 1
+
+
+criarJogo numPecas=5 tamanhoDado=10
+expect 5 getNumPecas
+expect 10 getTamanhoDado
+
+
+expecterror "ID Invalido: 'null'" adicionaCasa id= casa="INICIO" param=
+expecterror "ID Invalido: ''" adicionaCasa id="" casa="INICIO" param=
+expecterror "Tipo de casa invalido: 'null'" adicionaCasa id="C0" casa= param=
+expecterror "Tipo de casa invalido: ''" adicionaCasa id="C0" casa="" param=
+expecterror "Tipo de casa invalido: 'XYZ'" adicionaCasa id="C0" casa="XYZ" param=
+expecterror "Tipo de casa invalido: 'inicio'" adicionaCasa id="C0" casa="inicio" param=
+
+adicionaCasa id="C0" casa="INICIO" param=
+
+expecterror "Ja existe uma casa com ID 'C0'" adicionaCasa id="C0" casa="NADA" param=
+expecterror "Numero de casas para voltar invalido: 'xyz'" adicionaCasa id="C1" casa="VOLTA" param="xyz"
+expecterror "Numero de casas para voltar invalido: ''" adicionaCasa id="C1" casa="VOLTA" param=""
+expecterror "Numero de casas para voltar invalido: 'null'" adicionaCasa id="C1" casa="VOLTA" param=
+expecterror "Numero de casas para avancar invalido: 'xyz'" adicionaCasa id="C4" casa="AVANCA" param="xyz"
+expecterror "Numero de casas para avancar invalido: ''" adicionaCasa id="C4" casa="AVANCA" param=""
+expecterror "Numero de casas para avancar invalido: 'null'" adicionaCasa id="C4" casa="AVANCA" param=
+expecterror "ID de casa invalido: ''" adicionaCasa id="C6" casa="IR_PARA" param=""
+expecterror "ID de casa invalido: 'null'" adicionaCasa id="C6" casa="IR_PARA" param=
+expecterror "Nao existe casa com id 'xyz'" adicionaCasa id="C6" casa="IR_PARA" param="xyz"
+
+
+adicionaCasa id="C1" casa="REPETE" param=
+expect 2 getTamanhoTabuleiro
+adicionaCasa id="C2" casa="NADA" param=
+expect 3 getTamanhoTabuleiro
+
+adicionaCasa id="C3" casa="FIM" param=
+expect 4 getTamanhoTabuleiro
+
+iniciarJogo
+
+expect "J1:C0/J2:C0/J3:C0/J4:C0/J5:C0" getStatusJogo
+
+sairJogo
+
+criarJogo numPecas=3 tamanhoDado=6
+expect 3 getNumPecas
+expect 6 getTamanhoDado
+
+adicionaCasa id="Casa inicio" casa="INICIO" param=
+expect 1 getTamanhoTabuleiro
+adicionaCasa id="C6" casa="IR_PARA" param="Casa inicio"
+expect 2 getTamanhoTabuleiro
+
+iniciarJogo
+
+expect "J1:Casa inicio/J2:Casa inicio/J3:Casa inicio" getStatusJogo
+
+sairJogo
+
+criarJogo numPecas=2 tamanhoDado=6
+
+adicionaCasa id="abcdefghijklmnopqrstuvxyz1234567890" casa="INICIO" param=
+expect 1 getTamanhoTabuleiro
+adicionaCasa id="sldfslkjdfhlksajdhflkajsdhfkjashdflkajsdhflkajsdhflkajsdhf" casa="FIM" param=
+expect 2 getTamanhoTabuleiro
+
+iniciarJogo
+
+expect "J1:abcdefghijklmnopqrstuvxyz1234567890/J2:abcdefghijklmnopqrstuvxyz1234567890" getStatusJogo
+
