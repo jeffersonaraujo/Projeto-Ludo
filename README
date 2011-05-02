@@ -1,0 +1,22 @@
+/***************************************** EQUIPE BANGLADESH *****************************************\
+	
+	O presente projeto faz referencia ao conhecido jogo LUDO, é uma pequena abstração,
+ 	mas serve como base para o desenvolvimento de um projeto para a disciplina de Projeto
+ 	Avançado de Sistemas, do 6º período do curso Sistemas de Informação da UFPB.
+
+	Neste projeto abordaremos o uso de diversos padrões de projeto conhecidos, como também
+	o bom uso da orientação a objetos.
+
+	O projeto utiliza o Ant para gerenciar o código fonte como tambem o framework EasyAcept,
+	responsável para fazer os tratamentos de teste.
+
+	A equipe de desenvolvimento está utilizando a metodologia ágil programação em pares,
+	fazendo a sincronização do código fonte através do Git e GitHub.
+
+	Equipe: 
+	Jefferson Araújo - jefferssonaraujo@gmail.com / www.jeffersonaraujo.com
+	Paulo Cesar - eu@paulolira.net
+
+	Professor/Orientador: Rodrigo Rebouças
+
+\***************************************** EQUIPE BANGLADESH *****************************************/

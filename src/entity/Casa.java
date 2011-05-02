@@ -3,7 +3,8 @@ package entity;
 import strategy.IComportamento;
 
 /**
- * Class Casa
+ * Class Casa é utilizada para compor o tabuleiro, representa oito tipos 
+ * diferentes de comportamento.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
