@@ -13,6 +13,7 @@ public interface IComportamento {
 
     /**
      * Método usado para definir o comportamento das casas do jogo. 
+     * 
      * @return um comportamento válido para cada casa do jogo.
      */
     public String comportamentoCasa();
