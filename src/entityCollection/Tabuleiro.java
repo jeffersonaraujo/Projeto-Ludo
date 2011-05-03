@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Class Tabuleiro, onde é composto por várias casas e vai ser usado par os 
+ * Classe Tabuleiro, onde é composto por várias casas e vai ser usado par os 
  * jogadores poderem jogar.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
@@ -26,6 +26,8 @@ public class Tabuleiro {
         casas = new ArrayList<Casa>();
         jogadores = new LinkedList<Integer>();
     }
+    
+    
 
     /**
      * getCasas()
