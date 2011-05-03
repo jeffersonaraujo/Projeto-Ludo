@@ -3,8 +3,8 @@ package strategy;
 /**
  * Classe usada para definir o comportamento da casa Inicio
  * 
- * Casa que indica o início do jogo. É nesta casa que as peças dos jogadores 
- * estão alocadas, no início da partida.
+ * Casa que indica o in√≠cio do jogo. √â nesta casa que as pe√ßas dos jogadores 
+ * est√£o alocadas, no in√≠cio da partida.
  * 
  * @author Jefferson Ara√∫jo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net

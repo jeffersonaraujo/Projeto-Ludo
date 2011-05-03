@@ -8,7 +8,8 @@ package strategy;
  * Copyright (C) 2011 Equipe Bangladesh.
  */
 public class ComportamentoPara implements IComportamento {
-/**
+
+    /**
      * Metodo faz com que o jogador fique uma rodada sem jogar.
      * 
      * @return Comportamento da casa Para.

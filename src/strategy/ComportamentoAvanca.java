@@ -13,7 +13,7 @@ public class ComportamentoAvanca implements IComportamento {
     /**
      * Metodo faz com que o jogador avance X casas.
      * 
-     * @return Comportamento da casa Avança
+     * @return Comportamento da casa Avan√ßa
      */
     public String comportamentoCasa() {
         throw new UnsupportedOperationException("Not supported yet.");
