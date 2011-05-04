@@ -1,5 +1,6 @@
 package ludo;
 
+import controller.JogoLudo;
 import exception.TabuleiroException;
 import exception.JogadaException;
 import entity.Casa;
@@ -14,8 +15,10 @@ import entity.Casa;
  */
 public class LudoFacade {
 
+    private JogoLudo jogoLudo;
+
     public void criarJogo(int numPecas, int tamanhoDado) {
-        // implementar
+        jogoLudo.criarJogo(numPecas, tamanhoDado);
     }
 
     public int getNumPecas() {

@@ -11,7 +11,7 @@ package strategy;
 public class ComportamentoAvanca implements IComportamento {
 
     /**
-     * Metodo faz com que o jogador avance X casas.
+     * Método faz com que o jogador avance X casas.
      * 
      * @return Comportamento da casa Avança
      */
