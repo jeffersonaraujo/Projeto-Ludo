@@ -1,6 +1,7 @@
 package entityCollection;
 
 import entity.Casa;
+import exception.TabuleiroException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,8 +27,10 @@ public class Tabuleiro {
         casas = new ArrayList<Casa>();
         jogadores = new LinkedList<Integer>();
     }
-    
-    
+
+    public void adicionaCasa(String id, String nome, String param) throws TabuleiroException {
+        casas.add(null);
+    }
 
     /**
      * getCasas()

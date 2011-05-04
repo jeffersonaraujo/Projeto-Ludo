@@ -15,22 +15,59 @@ import entity.Casa;
  */
 public class LudoFacade {
 
+    private static LudoFacade ludoFacade;
     private JogoLudo jogoLudo;
 
+    private LudoFacade() {
+    }
+
+    /**
+     * Padrão de projeto Singleton, instancia única no sistema para a fachada.
+     * 
+     * @return uma instancia da classe LudoFacade
+     */
+    public static LudoFacade getInstance() {
+        if (ludoFacade == null) {
+            ludoFacade = new LudoFacade();
+        }
+        return ludoFacade;
+    }
+
+    /**
+     * Método para criar um novo jogo.
+     * 
+     * @param numPecas representa a quantidade de jogadores que tem no jogo,
+     * no mínimo 1 jogador.
+     * @param tamanhoDado representa o tamanho máximo que o dado pode ter.
+     * @return um novo jogo.
+     */
     public void criarJogo(int numPecas, int tamanhoDado) {
-        jogoLudo.criarJogo(numPecas, tamanhoDado);
+        jogoLudo = new JogoLudo(tamanhoDado, numPecas);
     }
 
+    /**
+     * getNumPecas()
+     * 
+     * @return quantidades de peças
+     */
     public int getNumPecas() {
-        // implementar
-        return -1;
+        return jogoLudo.getNumPecas();
     }
 
+    /**
+     * getTamanhoDado
+     * 
+     * @return o tamanho do dado
+     */
     public int getTamanhoDado() {
-        // implementar
-        return -1;
+        return jogoLudo.getTamanhoDado();
     }
 
+    /**
+     * getTamanhoTabuleiro
+     * 
+     * @return o tamanho do tabuleiro
+     */
     public int getTamanhoTabuleiro() {
         // implementar
         return -1;

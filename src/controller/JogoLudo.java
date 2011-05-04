@@ -28,19 +28,6 @@ public class JogoLudo {
     }
 
     /**
-     * Método para criar um novo jogo.
-     * 
-     * @param numPecas representa a quantidade de jogadores que tem no jogo,
-     * no mínimo 1 jogador.
-     * @param tamanhoDado representa o tamanho máximo que o dado pode ter.
-     * @return um novo jogo.
-     */
-    public JogoLudo criarJogo(int numPecas, int tamanhoDado) {
-        JogoLudo jogoLudo = new JogoLudo(tamanhoDado, numPecas);
-        return jogoLudo;
-    }
-
-    /**
      * Método para iniciar o jogo.
      * 
      */

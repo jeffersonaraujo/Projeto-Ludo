@@ -4,7 +4,7 @@ import exception.TabuleiroException;
 import exception.JogadaException;
 
 /**
- * Class LudoTestFacade
+ * Classe LudoTestFacade
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
@@ -14,22 +14,19 @@ import exception.JogadaException;
 public class LudoTestFacade {
 
     public void criarJogo(int numPecas, int tamanhoDado) {
-        // implementar
+        LudoFacade.getInstance().criarJogo(numPecas, tamanhoDado);
     }
 
     public int getNumPecas() {
-        // implementar
-        return 0;
+        return LudoFacade.getInstance().getNumPecas();
     }
 
     public int getTamanhoDado() {
-        // implementar
-        return 0;
+        return LudoFacade.getInstance().getTamanhoDado();
     }
 
     public int getTamanhoTabuleiro() {
-        // implementar
-        return 0;
+        return LudoFacade.getInstance().getTamanhoTabuleiro();
     }
 
     public void adicionaCasa(String id, String nome, String param) throws TabuleiroException {
