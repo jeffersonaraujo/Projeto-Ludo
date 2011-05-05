@@ -1,5 +1,7 @@
 package ludo;
 
+import entity.Casa;
+import entity.CasaInicio;
 import exception.TabuleiroException;
 import exception.JogadaException;
 
@@ -12,6 +14,8 @@ import exception.JogadaException;
  * Copyright (C) 2011 Equipe Bangladesh.
  */
 public class LudoTestFacade {
+
+    private Casa casa;
 
     public void criarJogo(int numPecas, int tamanhoDado) {
         LudoFacade.getInstance().criarJogo(numPecas, tamanhoDado);
@@ -30,7 +34,8 @@ public class LudoTestFacade {
     }
 
     public void adicionaCasa(String id, String nome, String param) throws TabuleiroException {
-        // implementar
+        casa = new CasaInicio(id, nome, param);
+        LudoFacade.getInstance().adicionaCasa(casa);
     }
 
     public void jogar(int jogador, int dado) throws JogadaException {

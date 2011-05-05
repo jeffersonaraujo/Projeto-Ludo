@@ -1,9 +1,8 @@
-package entityCollection;
+package controller;
 
 import entity.Casa;
 import exception.TabuleiroException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,43 +17,23 @@ import java.util.List;
 public class Tabuleiro {
 
     private List<Casa> casas;
-    private List<Integer> jogadores;
 
     /**
      * Construtor tabuleiro
      */
     public Tabuleiro() {
         casas = new ArrayList<Casa>();
-        jogadores = new LinkedList<Integer>();
     }
 
-    public void adicionaCasa(String id, String nome, String param) throws TabuleiroException {
-        casas.add(null);
+    public void adicionaCasa(Casa casa) throws TabuleiroException {
+        casas.add(casa);
     }
 
-    /**
-     * getCasas()
-     * 
-     * @return uma lista de casas que compõem o tabuleiro 
-     */
-    public List<Casa> getCasas() {
-        return casas;
-    }
-
-    public void setCasas(List<Casa> casas) {
-        this.casas = casas;
-    }
-
-    /**
-     * getJogadores()
-     * 
-     * @return uma lista de jogadores
-     */
-    public List<Integer> getJogadores() {
-        return jogadores;
-    }
-
-    public void setJogadores(List<Integer> jogadores) {
-        this.jogadores = jogadores;
+    public void isDuplicate(String id) throws TabuleiroException {
+        for (Casa casa : casas) {
+            if (casa.getId().equals(id)) {
+                throw new TabuleiroException("Ja existe uma casa com ID 'C0'");
+            }
+        }
     }
 }

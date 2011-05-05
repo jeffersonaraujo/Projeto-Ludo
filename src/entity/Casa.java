@@ -1,52 +1,30 @@
 package entity;
 
-import strategy.IComportamento;
-
 /**
- * Classe Casa é utilizada para compor o tabuleiro, representa oito tipos 
- * diferentes de comportamento.
+ * Classe Abstrata Casa representa a entidade Casa.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
  *
  * Copyright (C) 2011 Equipe Bangladesh.
  */
-public class Casa {
+public abstract class Casa {
 
     private String id;
-    private IComportamento comportamento;
+    private String parametro;
+    private String nomeCasa;
 
     /**
-     * Construtor da classe Casa
+     * Construtor da Classe Casa
      * 
-     * @param id Identificado da casa.
-     * @param comportamento Comportamento que a casa vai executar.
+     * @param id identificador da classe
+     * @param nomeCasa nome da casa
+     * @param parametro parametro que a casa executa
      */
-    public Casa(String id, IComportamento comportamento) {
+    public Casa(String id, String nomeCasa, String parametro) {
         this.id = id;
-        this.comportamento = comportamento;
-    }
-
-    /**
-     * Método que executa o comportamento da casa no tabuleiro.
-     * 
-     * @return o nome referente ao comportamento da casa.
-     */
-    public String comportamentoCasa() {
-        return comportamento.comportamentoCasa();
-    }
-
-    /**
-     * getComportamento()
-     * 
-     * @return o comportamento da casa no tabuleiro.
-     */
-    public IComportamento getComportamento() {
-        return comportamento;
-    }
-
-    public void setComportamento(IComportamento comportamento) {
-        this.comportamento = comportamento;
+        this.nomeCasa = nomeCasa;
+        this.parametro = parametro;
     }
 
     /**
@@ -58,7 +36,21 @@ public class Casa {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    /**
+     * getName()
+     * 
+     * @return o nome da casa
+     */
+    public String getNomeCasa() {
+        return nomeCasa;
+    }
+
+    /**
+     * getParametro()
+     * 
+     * @return o parametro que a casa vai utilizar
+     */
+    public String getParametro() {
+        return parametro;
     }
 }

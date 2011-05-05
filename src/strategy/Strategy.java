@@ -1,19 +1,16 @@
-package ludo;
+package strategy;
 
 import exception.TabuleiroException;
-import strategy.CasaController;
 
 /**
- * Class Main
+ * Interface que é responsável por fazer a estratégia de cada casa.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
  *
  * Copyright (C) 2011 Equipe Bangladesh.
  */
-public class Main {
+public interface Strategy {
 
-    public static void main(String[] args) throws TabuleiroException {
-
-    }
+    public void execute() throws TabuleiroException;
 }

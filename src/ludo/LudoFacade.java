@@ -1,9 +1,10 @@
 package ludo;
 
 import controller.JogoLudo;
+import controller.Tabuleiro;
+import entity.Casa;
 import exception.TabuleiroException;
 import exception.JogadaException;
-import entity.Casa;
 
 /**
  * Class LudoFacade
@@ -17,8 +18,10 @@ public class LudoFacade {
 
     private static LudoFacade ludoFacade;
     private JogoLudo jogoLudo;
+    private Tabuleiro tabuleiro;
 
     private LudoFacade() {
+        tabuleiro = new Tabuleiro();
     }
 
     /**
@@ -74,7 +77,7 @@ public class LudoFacade {
     }
 
     public void adicionaCasa(Casa casa) throws TabuleiroException {
-        // implementar
+        tabuleiro.adicionaCasa(casa);
     }
 
     public void jogar(int jogador, int dado) throws JogadaException {
