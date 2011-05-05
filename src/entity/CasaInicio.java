@@ -19,23 +19,7 @@ public class CasaInicio extends Casa implements Strategy {
     }
 
     public void execute() throws TabuleiroException {
-//        if (getId() == null) {
-//            throw new TabuleiroException("ID Invalido: 'null'");
-//        }
-//        if (getId().equals("")) {
-//            throw new TabuleiroException("ID Invalido: ''");
-//        }
-//        if (getNomeCasa() == null) {
-//            throw new TabuleiroException("Tipo de casa invalido: 'null'");
-//        }
-//        if (getNomeCasa().equals("")) {
-//            throw new TabuleiroException("Tipo de casa invalido: ''");
-//        }
-//        if (!getNomeCasa().equals(Casa.Casas.INICIO.name())) {
-//            throw new TabuleiroException("Tipo de casa invalido: '" + getNomeCasa() + "'");
-//        }
-//        if (getId().equals("C0")){
-//            throw new TabuleiroException("Ja existe uma casa com ID 'C0'");
-//        }
+        
+        
     }
 }

@@ -28,6 +28,13 @@ public class Tabuleiro {
     public void adicionaCasa(Casa casa) throws TabuleiroException {
         casas.add(casa);
     }
+    /**
+     * getTamanhoTabuleiro retorna o tamnho do tabuleiro.
+     * @return quantidade de casas
+     */
+    public int getTamanhoTabuleiro() {
+        return casas.size();
+    }
 
     public void isDuplicate(String id) throws TabuleiroException {
         for (Casa casa : casas) {
