@@ -37,6 +37,13 @@ public class Tabuleiro {
         }
         casas.add(casa);
     }
+    /**
+     * getTamanhoTabuleiro retorna o tamnho do tabuleiro.
+     * @return quantidade de casas
+     */
+    public int getTamanhoTabuleiro() {
+        return casas.size();
+    }
 
     public boolean isDuplicate(String id) {
         boolean retorno = false;
