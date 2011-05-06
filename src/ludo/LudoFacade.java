@@ -70,7 +70,7 @@ public class LudoFacade {
      * @return o tamanho do tabuleiro
      */
     public int getTamanhoTabuleiro() {
-        return tabuleiro.getTamanhoTabuleiro();
+        return jogoLudo.getTabuleiro().getTamanhoTabuleiro();
     }
 
     public void adicionaCasa(Casa casa) throws TabuleiroException {
