@@ -26,14 +26,25 @@ public class Tabuleiro {
     }
 
     public void adicionaCasa(Casa casa) throws TabuleiroException {
+        if (casa.getId() == null || casa.getId().equals("")) {
+            throw new TabuleiroException("ID Invalido: '" + casa.getId() + "'");
+        }
+        if (casa.getTipoCasa() == null || casa.getTipoCasa().equals("")) {
+            throw new TabuleiroException("Tipo de casa invalido: '" + casa.getTipoCasa() + "'");
+        }
+        if (isDuplicate(casa.getId())) {
+            throw new TabuleiroException("Ja existe uma casa com ID '" + casa.getId() + "'");
+        }
         casas.add(casa);
     }
 
-    public void isDuplicate(String id) throws TabuleiroException {
+    public boolean isDuplicate(String id) {
+        boolean retorno = false;
         for (Casa casa : casas) {
             if (casa.getId().equals(id)) {
-                throw new TabuleiroException("Ja existe uma casa com ID 'C0'");
+                retorno = true;
             }
         }
+        return retorno;
     }
 }

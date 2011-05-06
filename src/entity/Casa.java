@@ -1,18 +1,25 @@
 package entity;
 
 /**
- * Classe Abstrata Casa representa a entidade Casa.
+ * Classe Casa representa a entidade Casa.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
  *
  * Copyright (C) 2011 Equipe Bangladesh.
  */
-public abstract class Casa {
+public class Casa {
 
     private String id;
-    private String parametro;
-    private String nomeCasa;
+    private String tipoCasa;
+    private String param;
+    protected ICasa comportamento;
+
+    /**
+     * Construtor vazio da classe Casa
+     */
+    public Casa() {
+    }
 
     /**
      * Construtor da Classe Casa
@@ -21,36 +28,54 @@ public abstract class Casa {
      * @param nomeCasa nome da casa
      * @param parametro parametro que a casa executa
      */
-    public Casa(String id, String nomeCasa, String parametro) {
+    public Casa(String id, String tipoCasa, String param) {
+        this.tipoCasa = tipoCasa;
         this.id = id;
-        this.nomeCasa = nomeCasa;
-        this.parametro = parametro;
+        this.param = param;
+    }
+
+    /**
+     * getComportamento()
+     * 
+     * @return o comportamento da casa
+     */
+    public String getComportamento() {
+        return comportamento.getComportamento();
+    }
+
+    /**
+     * setComportamento
+     * 
+     * @param comportamento Interface que tem a estratégia da casa
+     */
+    public void setComportamento(ICasa comportamento) {
+        this.comportamento = comportamento;
     }
 
     /**
      * getId()
      * 
-     * @return o idendificador da casa. 
+     * @return id da casa 
      */
     public String getId() {
         return id;
     }
 
     /**
-     * getName()
+     * getParam()
      * 
-     * @return o nome da casa
+     * @return o parametro que a casa vai executar
      */
-    public String getNomeCasa() {
-        return nomeCasa;
+    public String getParam() {
+        return param;
     }
 
     /**
-     * getParametro()
+     * getTipoCasa
      * 
-     * @return o parametro que a casa vai utilizar
+     * @return tipo da casa
      */
-    public String getParametro() {
-        return parametro;
+    public String getTipoCasa() {
+        return tipoCasa;
     }
 }

@@ -18,10 +18,8 @@ public class LudoFacade {
 
     private static LudoFacade ludoFacade;
     private JogoLudo jogoLudo;
-    private Tabuleiro tabuleiro;
 
     private LudoFacade() {
-        tabuleiro = new Tabuleiro();
     }
 
     /**
@@ -77,7 +75,7 @@ public class LudoFacade {
     }
 
     public void adicionaCasa(Casa casa) throws TabuleiroException {
-        tabuleiro.adicionaCasa(casa);
+        jogoLudo.getTabuleiro().adicionaCasa(casa);
     }
 
     public void jogar(int jogador, int dado) throws JogadaException {

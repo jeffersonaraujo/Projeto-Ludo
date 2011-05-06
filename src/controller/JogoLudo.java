@@ -14,6 +14,7 @@ public class JogoLudo {
 
     private int tamanhoDado;
     private int numPecas;
+    private Tabuleiro tabuleiro;
 
     /**
      * Construtor JogoLudo
@@ -25,6 +26,7 @@ public class JogoLudo {
     public JogoLudo(int tamanhoDado, int numPecas) {
         this.tamanhoDado = tamanhoDado;
         this.numPecas = numPecas;
+        tabuleiro = new Tabuleiro();
     }
 
     /**
@@ -60,10 +62,6 @@ public class JogoLudo {
         return numPecas;
     }
 
-    public void setNumPecas(int numPecas) {
-        this.numPecas = numPecas;
-    }
-
     /**
      * getTamanhoDado()
      * 
@@ -73,7 +71,12 @@ public class JogoLudo {
         return tamanhoDado;
     }
 
-    public void setTamanhoDado(int tamanhoDado) {
-        this.tamanhoDado = tamanhoDado;
+    /**
+     * getTabuleiro()
+     * 
+     * @return a instancia do tabuleiro
+     */
+    public Tabuleiro getTabuleiro() {
+        return tabuleiro;
     }
 }

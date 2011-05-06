@@ -1,7 +1,6 @@
 package ludo;
 
 import exception.TabuleiroException;
-import strategy.CasaController;
 
 /**
  * Class Main
