@@ -1,7 +1,7 @@
 package entity;
 
 /**
- * Classe Casa representa a entidade Casa.
+ * Classe CasaFim que tem a estratégia de final de jogo.
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
@@ -11,12 +11,12 @@ package entity;
 public class CasaFim implements ICasa {
 
     /**
-     * getComportamento()
+     * Método que executará o comportamento da casa Fim
      * 
      * @return o comportamento da casa FIM
      */
-    @Override
     public String getComportamento() {
-        return "Encerrar jogo";
+        //implementar
+        return null;
     }
 }

@@ -1,6 +1,8 @@
 package controller;
 
 import exception.JogadaException;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Classe JogoLudo tem os principais métodos para controlar o jogo.
@@ -15,6 +17,7 @@ public class JogoLudo {
     private int tamanhoDado;
     private int numPecas;
     private Tabuleiro tabuleiro;
+    private List<Integer> jogadores;
 
     /**
      * Construtor JogoLudo
@@ -27,13 +30,17 @@ public class JogoLudo {
         this.tamanhoDado = tamanhoDado;
         this.numPecas = numPecas;
         tabuleiro = new Tabuleiro();
+        jogadores = new LinkedList<Integer>();
     }
 
     /**
-     * Método para iniciar o jogo.
+     * Método para iniciar o jogo, tem que ter no minimo um jogador.
      * 
      */
     public void iniciarJogo() {
+        for (int i = 1; i <= numPecas; i++) {
+            jogadores.add(i);
+        }
     }
 
     /**
@@ -51,6 +58,26 @@ public class JogoLudo {
      * @throws JogadaException 
      */
     public void jogar(int jogador, int dado) throws JogadaException {
+    }
+
+    /**
+     * getStatusJogo
+     * 
+     * @return o estado atual do jogo.
+     */
+    public String getStatusJogo() {
+        String retorno = "";
+        for (int i = 0; i < numPecas; i++) {
+            if (i == 0) {
+                retorno += "J" + jogadores.get(i) + ":"
+                        + tabuleiro.getCasas().iterator().next().getId();
+            } else {
+                retorno += "/J" + jogadores.get(i) + ":"
+                        + tabuleiro.getCasas().iterator().next().getId();
+            }
+
+        }
+        return retorno;
     }
 
     /**

@@ -1,13 +1,12 @@
 package ludo;
 
 import controller.JogoLudo;
-import controller.Tabuleiro;
 import entity.Casa;
 import exception.TabuleiroException;
 import exception.JogadaException;
 
 /**
- * Class LudoFacade
+ * Classe LudoFacade representa a fachada do sistema 
  *
  * @author Jefferson Araújo, jefferssonaraujo@gmail.com
  * @author Paulo Cesar, eu@paulolira.net
@@ -18,9 +17,6 @@ public class LudoFacade {
 
     private static LudoFacade ludoFacade;
     private JogoLudo jogoLudo;
-
-    private LudoFacade() {
-    }
 
     /**
      * Padrão de projeto Singleton, instancia única no sistema para a fachada.
@@ -37,10 +33,8 @@ public class LudoFacade {
     /**
      * Método para criar um novo jogo.
      * 
-     * @param numPecas representa a quantidade de jogadores que tem no jogo,
-     * no mínimo 1 jogador.
+     * @param numPecas representa a quantidade de jogadores que tem no jogo
      * @param tamanhoDado representa o tamanho máximo que o dado pode ter.
-     * @return um novo jogo.
      */
     public void criarJogo(int numPecas, int tamanhoDado) {
         jogoLudo = new JogoLudo(tamanhoDado, numPecas);
@@ -73,23 +67,48 @@ public class LudoFacade {
         return jogoLudo.getTabuleiro().getTamanhoTabuleiro();
     }
 
+    /**
+     * Método que adiciona casa ao tabuleiro.
+     * 
+     * @param casa casa que será adicionada
+     * @throws TabuleiroException  lança exceção se não conseguir adicionar.
+     */
     public void adicionaCasa(Casa casa) throws TabuleiroException {
         jogoLudo.getTabuleiro().adicionaCasa(casa);
     }
 
+    /**
+     * Método que representa uma jogada.
+     * 
+     * @param jogador jogador que esta realizando a jogada.
+     * @param dado número do dado jogado.
+     * @throws JogadaException 
+     */
     public void jogar(int jogador, int dado) throws JogadaException {
         // implementar
     }
 
+    /**
+     * getStatusJogo
+     * 
+     * @return o estado atual do jogo.
+     */
     public String getStatusJogo() {
-        // implementar
-        return null;
+        return jogoLudo.getStatusJogo();
     }
 
+    /**
+     * Método para iniciar o jogo, tem que ter no minimo um jogador.
+     * 
+     */
     public void iniciarJogo() {
-        // Iniciar o Jogo
+        jogoLudo.iniciarJogo();
     }
 
+    /**
+     * Método para sair do Jogo
+     * 
+     */
     public void sairJogo() {
         // Sair do Jogo
     }

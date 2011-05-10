@@ -32,7 +32,6 @@ public class LudoTestFacade {
 
     public void adicionaCasa(String id, String nome, String param) throws TabuleiroException {
         Casa casa = new Casa(id, nome, param);
-        //casa.setComportamento(new CasaInicio());
         LudoFacade.getInstance().adicionaCasa(casa);
     }
 
@@ -41,8 +40,7 @@ public class LudoTestFacade {
     }
 
     public String getStatusJogo() {
-        // implementar
-        return null;
+        return LudoFacade.getInstance().getStatusJogo();
     }
 
     public void sairJogo() {
@@ -50,6 +48,6 @@ public class LudoTestFacade {
     }
 
     public void iniciarJogo() {
-        // Iniciar o Jogo
+        LudoFacade.getInstance().iniciarJogo();
     }
 }

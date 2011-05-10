@@ -1,5 +1,7 @@
 package entity;
 
+import exception.TabuleiroException;
+
 /**
  * Interface ICasa representa a lógica da estratégia
  *
@@ -15,5 +17,5 @@ public interface ICasa {
      * 
      * @return o comportamento da casa
      */
-    public String getComportamento();
+    public String getComportamento() throws TabuleiroException;
 }

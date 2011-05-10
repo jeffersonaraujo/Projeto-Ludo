@@ -1,5 +1,7 @@
 package entity;
 
+import exception.TabuleiroException;
+
 /**
  * Classe Casa representa a entidade Casa.
  *
@@ -39,7 +41,7 @@ public class Casa {
      * 
      * @return o comportamento da casa
      */
-    public String getComportamento() {
+    public String getComportamento() throws TabuleiroException {
         return comportamento.getComportamento();
     }
 
